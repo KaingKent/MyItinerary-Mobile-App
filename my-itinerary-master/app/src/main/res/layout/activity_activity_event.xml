@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".CreateItinerary">
+
+    <Button
+        android:id="@+id/createItineraryBtn"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="184dp"
+        android:backgroundTint="@color/tertiary"
+        android:fontFamily="@font/roboto"
+        android:text="@string/create"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescription"
+        app:rippleColor="#FFFFFF"
+        tools:text="@string/create" />
+
+    <EditText
+        android:id="@+id/editNameActivity"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/roboto_thin"
+        android:hint="@string/name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewActivityText" />
+
+    <TextView
+        android:id="@+id/NewActivityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="143dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/new_itinerary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/endTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:autofillHints=""
+        android:backgroundTint="#FFFFFF"
+        android:ellipsize="none"
+        android:ems="10"
+        android:fontFamily="@font/roboto_thin"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:scrollHorizontally="false"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNameActivity" />
+
+    <ImageButton
+        android:id="@+id/backItineraries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/editDescription"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <Button
+        android:id="@+id/startTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginEnd="17dp"
+        android:text="Start Time"
+        app:layout_constraintBottom_toBottomOf="@+id/endTime"
+        app:layout_constraintEnd_toStartOf="@+id/endTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/endTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/endTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="470dp"
+        android:text="End Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTime"
+        app:layout_constraintTop_toBottomOf="@+id/NewActivityText" />
+
+    <TextView
+        android:id="@+id/startTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginBottom="429dp"
+        android:text="Start Time:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/endTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginBottom="394dp"
+        android:text="End Time:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

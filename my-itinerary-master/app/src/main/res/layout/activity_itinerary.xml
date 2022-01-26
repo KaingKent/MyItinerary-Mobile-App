@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itinerary_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".Itinerary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:layout_marginBottom="528dp"
+        android:background="@color/main"
+        app:layout_constraintBottom_toTopOf="@+id/deleteItin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backItineraries">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/editItinName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="#FFFFFF"
+                    android:drawableStart="@drawable/edit_tertiary"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/itinerary_name"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:paddingRight="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editItinDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="#FFFFFF"
+                    android:drawableStart="@drawable/edit_tertiary"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/description"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/off_white"
+                    android:textColorHighlight="@color/off_white"
+                    android:textColorHint="@color/off_white"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/startTimeEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editItinName" />
+
+                <!-- Start Time and End Time moved and constrained -->
+
+                <TextView
+                    android:id="@+id/startTimeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Start Time: "
+                    app:layout_constraintStart_toEndOf="@+id/startTimeEdit"
+                    app:layout_constraintTop_toBottomOf="@+id/editItinDesc" />
+
+                <ImageButton
+                    android:id="@+id/startTimeEdit"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/startTimeEditText"
+                    app:srcCompat="@drawable/edit_tertiary" />
+
+                <TextView
+                    android:id="@+id/endTimeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="End Time: "
+                    app:layout_constraintStart_toEndOf="@+id/endTimeEdit"
+                    app:layout_constraintTop_toBottomOf="@+id/startTimeEditText" />
+
+                <ImageButton
+                    android:id="@+id/endTimeEdit"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@null"
+                    app:layout_constraintEnd_toStartOf="@+id/endTimeEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/endTimeEditText"
+                    app:srcCompat="@drawable/edit_tertiary" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageButton
+            android:id="@+id/backItineraries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:text="share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/events_itinerary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/deleteItin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/delete_red_50" />
+
+    <ImageButton
+        android:id="@+id/save"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/check_save_green_50" />
+
+    <Button
+        android:id="@+id/newEventBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/tertiary"
+        android:text="@string/new_event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteItin"
+        app:layout_constraintStart_toEndOf="@+id/save" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

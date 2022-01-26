@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "750431495354",
+    "project_id": "my-itinerary-bb25d",
+    "storage_bucket": "my-itinerary-bb25d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750431495354:android:f9cfca84aa417b9929ce83",
+        "android_client_info": {
+          "package_name": "com.example.myitinerary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750431495354-35n6ia44ojfv5d53d50fbqaoc7g2et5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrSr6YPF1GYC3J1i9_5lrkk2rfnqfJcAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750431495354-35n6ia44ojfv5d53d50fbqaoc7g2et5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

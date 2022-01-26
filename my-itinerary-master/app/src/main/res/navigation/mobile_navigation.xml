@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myitinerary.ItineraryFragment"
+        android:label="@string/menu_Itineraries"
+        android:color="@color/white"
+        tools:layout="@layout/fragment_itineraries" />
+
+    <fragment
+        android:id="@+id/nav_shared"
+        android:name="com.example.myitinerary.SharedFragment"
+        android:label="@string/menu_shared"
+        android:color="@color/white"
+        tools:layout="@layout/fragment_shared" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.myitinerary.ProfileFragment"
+        android:label="@string/menu_profile"
+        android:color="@color/white"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

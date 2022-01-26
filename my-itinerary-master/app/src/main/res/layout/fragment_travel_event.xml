@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".CreateItinerary">
+
+    <EditText
+        android:id="@+id/editStartingAirport"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/roboto_thin"
+        android:hint="@string/sairport"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TravelEventText" />
+
+    <EditText
+        android:id="@+id/editEndingAirport"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/roboto_thin"
+        android:hint="@string/ending_airport"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TravelEventText" />
+
+    <TextView
+        android:id="@+id/TravelEventText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/roboto"
+        android:text="Travel Event"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginEnd="17dp"
+        android:text="Start Time"
+        app:layout_constraintBottom_toBottomOf="@+id/endTime"
+        app:layout_constraintEnd_toStartOf="@+id/endTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/endTime"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/endTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="470dp"
+        android:text="End Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTime"
+        app:layout_constraintTop_toBottomOf="@+id/editEndingAirport"
+        />
+
+    <TextView
+        android:id="@+id/startTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginBottom="429dp"
+        android:text="Start Time:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/endTime"/>
+
+    <TextView
+        android:id="@+id/endTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginBottom="394dp"
+        android:text="End Time:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeText"/>
+
+    <Button
+        android:id="@+id/createTravelBtn"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:backgroundTint="@color/tertiary"
+        android:fontFamily="@font/roboto"
+        android:text="@string/create"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FFFFFF"
+        tools:layout_editor_absoluteY="631dp"
+        tools:text="@string/create"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeText"/>
+
+    <ImageButton
+        android:id="@+id/cancelTravel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteX="31dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
